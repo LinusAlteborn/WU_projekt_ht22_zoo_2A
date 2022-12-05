@@ -1,226 +1,147 @@
-@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Lilita+One&family=Nerko+One&family=Noto+Sans+Sinhala:wght@300&family=Poor+Story&family=Roboto:wght@500&display=swap');
+/* Till alla */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 *{
-    margin: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans Sinhala', sans-serif;
+
+    margin: 0;
+
+    font-family: 'Roboto', sans-serif;
 }
 
-#grid_wrapper_index {
-    display: grid;
-    grid-template-columns: 1.75fr 8fr;
-    grid-template-rows: 60px 1fr;
-    grid-template-areas: 
-    "he he"
-    "le ri";
-
-    margin-left: 150px;
-    margin-right: 150px;
-
-    border-radius: 20px;
-    background-color: rgb(255, 255, 255);
+:root {
+    --header_height: 50px;
+    --nav_height: 25px;
+    --footer_height: 150px;
+    --card_border_radius: 0;
 }
 
+
+
+/* Bakgrund */
+html { 
+    background: url(../img/nature/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+/* Header */
 header {
-    grid-area: he;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 20px 0 20px;
-}
-
-h1 {
-    font-size: 40px;
-    color: rgb(20, 20, 20);
-}
-
-a {
-    text-decoration: none;
-}
-
-#tabs {
-    width: 250px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.tab {
-    color: rgb(24, 24, 24);
-}
-
-.tab_img {
-    width: 70%;
-}
-
-#left {
-    grid-area: le;
-}
-
-#big {
-    grid-area: ri;
-}
-
-#section_big {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.article_big {
-    width: 100%;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: top;
-}
-
-.article_big > h2 {
-    color: white;
-    font-weight: 900;
-}
-
-.article_big > p {
-    color: white;
-    font-weight: 500;
-    width: 65%;
-}
-
-#article_big_tiger {
-    background: url(../img/animals/tiger.jpg);
-    background-size: cover;
-}
-
-section > img {
-    object-fit: cover;
-    height: 29vh;
-    width: 100%;
-
-    padding: 10px;
-
-    border-radius: 20px;
-}
-
-#grid_wrapper_about {
-    display: grid;
-    grid-template-columns: 1.75fr 8fr;
-    grid-template-rows: 60px 1fr;
-    grid-template-areas: 
-    "he he"
-    "ab ab"
-    "em em";
-
-    margin-left: 150px;
-    margin-right: 150px;
-
-    border-radius: 20px;
-    background-color: rgb(255, 255, 255);
-}
-
-#section_our_mission {
-    grid-area: ab;
-    align-items: center;
-    padding: 5% 20% 10% 15%;
-    text-align: center;
-}
-
-#section_employees_title {
-    font-weight: 900;
-    text-align: center;
-}
-
-#div_employees {
-    display: flex;
-    grid-area: em;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#section_employees {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 10% 0 10%;
-    align-items: center;
-    justify-content: center;
-}
-
-.articles_employees {
-    width: 150px;
-    height: 150px;
-    border-radius: 5px;
-    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    position: fixed;
+    width: 100%;
+}
+
+#card_nav {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    height: var(--header_height);
+
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
-.articles_employees > h2 {
-    color: white;
-    font-weight: 100;
-    font-size: large;
+#card_nav > nav {
+    display: flex;
+    align-items: center;
+
+    height: var(--nav_height);
 }
 
-.articles_employees > p {
-    color: white;
-    font-weight: 100;
+#card_nav > nav > *:not(:last-child) {
+    margin-right: 10px;
 }
 
-#articles_person1 {
-    background: url(../img/persons/avatar-14442c2e192eabfebb9e45f07b23cdd8.jpg);
-    background-size: cover;
+#card_nav > nav > a > img {
+   width: auto;
+   height: var(--nav_height);
 }
 
-#articles_person2 {
-    background: url(../img/persons/avatar-1b1afc16e9bc79edbb292d32abbc2a86.jpg);
-    background-size: cover;
-}
 
-#articles_person3 {
-    background: url(../img/persons/avatar-2180facc60532c668ad3eefb093831d9.jpg);
-    background-size: cover;
-}
 
-#articles_person4 {
-    background: url(../img/persons/avatar-6eff317c04c60419d06b2f4b0323eef0.jpg);
-    background-size: cover;
-}
-
-#articles_person5 {
-    background: url(../img/persons/avatar-99f7486ac54be1e7361b996e341e1090.jpg);
-    background-size: cover;
-}
-
-#articles_person6 {
-    background: url(../img/persons/avatar-aea3441ddc1173c3b63794fe1ebcce0e.jpg);
-    background-size: cover;
-}
-
-#articles_person7 {
-    background: url(../img/persons/avatar-23fdc1d1c52f710520d659f56a264b40.jpg);
-    background-size: cover;
-}
-
-#articles_person8 {
-    background: url(../img/persons/avatar-f5570c089ffac9de2094c30ee7f4304d.jpg);
-    background-size: cover;
-}
-
-#grid_wrapper_menu {
+/* Footer */
+footer {
     display: grid;
-    grid-template-columns: 1.75fr 8fr;
-    grid-template-rows: 60px 1fr;
-    grid-template-areas: 
-    "he he"
-    "ab ab"
-    "em em";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row: 1.618fr 1fr;
 
-    margin-left: 150px;
-    margin-right: 150px;
+    width: 100%;
+    height: var(--footer_height);
+}
 
-    border-radius: 20px;
+
+
+/* Binder */
+#binder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: var(--header_height);
+}
+
+#binder > *:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+
+
+/* Kort */
+.card {
+    display: grid;
+
+    width: 70vw;
+
     background-color: rgb(255, 255, 255);
+    border-radius: var(--card_border_radius);
+}
+
+#card_top {
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "left1 right"
+    "left2 right"
+    "left3 right";
+
+    height: 500px;
+}
+
+.top_articles {
+    background-color: black;
+    border-radius: var(--card_border_radius);
+    margin: 10px;
+}
+
+#top_left_1 {
+    grid-area: left1;
+    background: url(../img/top/left1.jpeg);
+    background-size: cover;
+}
+
+#top_left_2 {
+    grid-area: left2;
+    background: url(../img/top/left2.webp);
+    background-size: cover;
+}
+
+#top_left_3 {
+    grid-area: left3;
+    background: url(../img/top/left3.webp);
+    background-size: cover;
+}
+
+#top_right {
+    grid-area: right;
+    background: url(../img/top/right.jpg);
+    background-size: cover;
 }
