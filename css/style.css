@@ -1,34 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Nerko+One&family=Poor+Story&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&family=Lilita+One&family=Nerko+One&family=Noto+Sans+Sinhala:wght@300&family=Poor+Story&family=Roboto:wght@500&display=swap');
 
 *{
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Lilita One', cursive;
+    font-family: 'Noto Sans Sinhala', sans-serif;
 }
 
-#nature {
-    width: 98vw;
-}
-
-#blur {
-    position: fixed;
-    top: 0;
-
-    width: 76vw;
-    height: 100vh;
-
-    margin-left: 150px;
-    margin-right: 150px;
-
-    background-color: rgb(255, 255, 255);
-}
-
-#grid_wrapper {
-    position: fixed;
-    top: 0px;
-
+#grid_wrapper_index {
     display: grid;
-    grid-template-columns: 2fr 8fr;
+    grid-template-columns: 1.75fr 8fr;
     grid-template-rows: 60px 1fr;
     grid-template-areas: 
     "he he"
@@ -36,6 +16,9 @@
 
     margin-left: 150px;
     margin-right: 150px;
+
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
 }
 
 header {
@@ -48,6 +31,7 @@ header {
 
 h1 {
     font-size: 40px;
+    color: rgb(20, 20, 20);
 }
 
 a {
@@ -63,7 +47,7 @@ a {
 }
 
 .tab {
-    color: black;
+    color: rgb(24, 24, 24);
 }
 
 .tab_img {
@@ -78,11 +62,165 @@ a {
     grid-area: ri;
 }
 
+#section_big {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article_big {
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: top;
+}
+
+.article_big > h2 {
+    color: white;
+    font-weight: 900;
+}
+
+.article_big > p {
+    color: white;
+    font-weight: 500;
+    width: 65%;
+}
+
+#article_big_tiger {
+    background: url(../img/animals/tiger.jpg);
+    background-size: cover;
+}
+
 section > img {
     object-fit: cover;
+    height: 29vh;
     width: 100%;
 
     padding: 10px;
 
-    border-radius: 25px;
+    border-radius: 20px;
+}
+
+#grid_wrapper_about {
+    display: grid;
+    grid-template-columns: 1.75fr 8fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: 
+    "he he"
+    "ab ab"
+    "em em";
+
+    margin-left: 150px;
+    margin-right: 150px;
+
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+#section_our_mission {
+    grid-area: ab;
+    align-items: center;
+    padding: 5% 20% 10% 15%;
+    text-align: center;
+}
+
+#section_employees_title {
+    font-weight: 900;
+    text-align: center;
+}
+
+#div_employees {
+    display: flex;
+    grid-area: em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#section_employees {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10% 0 10%;
+    align-items: center;
+    justify-content: center;
+}
+
+.articles_employees {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.articles_employees > h2 {
+    color: white;
+    font-weight: 100;
+    font-size: large;
+}
+
+.articles_employees > p {
+    color: white;
+    font-weight: 100;
+}
+
+#articles_person1 {
+    background: url(../img/persons/avatar-14442c2e192eabfebb9e45f07b23cdd8.jpg);
+    background-size: cover;
+}
+
+#articles_person2 {
+    background: url(../img/persons/avatar-1b1afc16e9bc79edbb292d32abbc2a86.jpg);
+    background-size: cover;
+}
+
+#articles_person3 {
+    background: url(../img/persons/avatar-2180facc60532c668ad3eefb093831d9.jpg);
+    background-size: cover;
+}
+
+#articles_person4 {
+    background: url(../img/persons/avatar-6eff317c04c60419d06b2f4b0323eef0.jpg);
+    background-size: cover;
+}
+
+#articles_person5 {
+    background: url(../img/persons/avatar-99f7486ac54be1e7361b996e341e1090.jpg);
+    background-size: cover;
+}
+
+#articles_person6 {
+    background: url(../img/persons/avatar-aea3441ddc1173c3b63794fe1ebcce0e.jpg);
+    background-size: cover;
+}
+
+#articles_person7 {
+    background: url(../img/persons/avatar-23fdc1d1c52f710520d659f56a264b40.jpg);
+    background-size: cover;
+}
+
+#articles_person8 {
+    background: url(../img/persons/avatar-f5570c089ffac9de2094c30ee7f4304d.jpg);
+    background-size: cover;
+}
+
+#grid_wrapper_menu {
+    display: grid;
+    grid-template-columns: 1.75fr 8fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: 
+    "he he"
+    "ab ab"
+    "em em";
+
+    margin-left: 150px;
+    margin-right: 150px;
+
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
 }
