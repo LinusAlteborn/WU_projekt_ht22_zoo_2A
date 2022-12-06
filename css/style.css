@@ -12,18 +12,62 @@
 :root {
     --header_height: 50px;
     --nav_height: 22px;
-    --footer_height: 150px;
+
     --card_border_radius: 0;
+    --card_width: 65vw;
+    --card_spacing: 100px;
+
     --padding_default: 15px;
     --picture_margin: 10px;
     --square_img_width: 150px;
+
+    --footer_height: 400px;
+    --footer_padding_top: 50px; 
+    --footer_font_size: 10px;
+    --footer_line_height: 24px;
+    --footer_content_width: 800px;
+    --footer_divider_margin: 50px;
+    --footer_divider_width: 0.5px;
+
+    --button_border_radius: 7px;
+    --button_padding_side: 25px;
+    --button_padding_vertical: 8px;
+    --button_text_size: 20px;
+
+    --donate_img_size: 400px;
+    --donate_text_size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.button {
+    display: inline-block;
+    
+    background-color: rgb(18, 186, 124);
+    border-radius: var(--button_border_radius);
+    padding: var(--button_padding_vertical) var(--button_padding_side);
+    width: fit-content;
+
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: var(--button_text_size);
 }
 
 
 
 /* Bakgrund */
 html { 
-    background: url(../img/nature/background.jpg) no-repeat center center fixed; 
+    background: white no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -84,12 +128,73 @@ header {
 
 /* Footer */
 footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-row: 1.618fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     width: 100%;
     height: var(--footer_height);
+    
+    background:rgb(0,145,91);
+    padding: var(--footer_padding_top) calc(50% - var(--footer_content_width)/2);
+}
+
+#footer_binder {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+
+    width: 100%;
+}
+
+.footer_column::before {
+    content:attr(aria-label);
+    font-size:120%;
+    font-weight:bolder;
+    color: rgba(255, 255, 255, 0.775);
+    font-size: calc(var(--footer_font_size) * 1.2);
+    line-height: calc(var(--footer_font_size) * 5);
+}
+
+.footer_column > li > a {
+    font-weight: 550;
+    color: rgba(255, 255, 255, 0.775);
+    font-size: var(--footer_font_size);
+    line-height: calc(var(--footer_font_size) * 2.5);
+}
+
+#footer_copyright {
+    width: 100%;
+
+    text-align: right;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--footer_font_size);
+
+    margin-top: var(--footer_font_size);
+}
+
+#footer_column_events {
+    grid-area: ev;
+}
+
+#footer_column_plan {
+    grid-area: pl;
+}
+
+#footer_column_school {
+    grid-area: sc;
+}
+
+#footer_column_other {
+    grid-area: ot;
+}
+
+#footer_divider{
+    width: 100%;
+    height: var(--footer_divider_width);
+    background: rgba(255, 255, 255, 0.699);
+
+    margin-top: var(--footer_divider_margin);
 }
 
 
@@ -103,8 +208,8 @@ footer {
     padding-top: var(--header_height);
 }
 
-#binder > *:not(:last-child) {
-    margin-bottom: 30px;
+#binder > * {
+    margin-bottom: var(--card_spacing);
 }
 
 
@@ -113,7 +218,7 @@ footer {
 .card {
     display: grid;
 
-    width: 70vw;
+    width: var(--card_width);
 
     background-color: rgb(255, 255, 255);
     border-radius: var(--card_border_radius);
@@ -159,4 +264,44 @@ footer {
     grid-area: right;
     background: url(../img/top/right.jpg);
     background-size: cover;
+}
+
+#card_donate {
+    grid-template-columns: min-content(50%, 100%) var(--donate_img_size);
+    grid-template-rows: var(--donate_img_size);
+    grid-template-areas:
+    "text img";
+
+    height: cal(var(--square_img_width)*3);
+}
+
+#card_donate_text {
+    display: flex;
+    grid-area: text;
+
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+#card_donate_text > *:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+#card_donate_img {
+    grid-area: img;
+
+    width: var(--donate_img_size);
+    height: var(--donate_img_size);
+
+    background: url(../img/animals/meerkats-zoo-animals-zoological-garden-preview.jpeg);
+    background-size: cover;
+}
+
+#card_donate_text > h2 {
+    font-size: calc(var(--donate_text_size) * 2.25);
+}
+
+#card_donate_text > p {
+    font-size: var(--donate_text_size);
 }
