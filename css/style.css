@@ -1,29 +1,28 @@
 /* Till alla */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Julius+Sans+One&family=Mulish:wght@600&family=Nerko+One&family=Work+Sans:wght@300;500;800&display=swap');
 
 *{
     box-sizing: border-box;
 
     margin: 0;
-
-    font-family: 'Roboto', sans-serif;
 }
 
 :root {
-    --header_height: 50px;
-    --nav_height: 22px;
+    --header_height: 125px;
+    --nav_height: 18px;
+    --nav_spacing: 40px;
 
-    --card_border_radius: 0;
-    --card_width: 65vw;
-    --card_spacing: 100px;
+    --card_border_radius: 30px;
+    --card_width: 70vw;
+    --card_spacing: 175px;
 
-    --padding_default: 15px;
-    --picture_margin: 10px;
-    --square_img_width: 150px;
+    --padding_default: 40px;
+    --picture_margin: 40px;
+    --square_img_width: 13.5vw;
 
     --footer_height: 400px;
     --footer_padding_top: 50px; 
-    --footer_font_size: 10px;
+    --footer_font_size: 12px;
     --footer_line_height: 24px;
     --footer_content_width: 800px;
     --footer_divider_margin: 50px;
@@ -34,16 +33,45 @@
     --button_padding_vertical: 8px;
     --button_text_size: 20px;
 
-    --donate_img_size: 400px;
-    --donate_text_size: 15px;
+    --donate_img_size: calc(var(--card_width) / 2);
+    --donate_text_size: 18px;
+}
+
+h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+}
+
+h2 {
+    font-family: 'Nerko One', cursive;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+h3 {
+    font-family: 'Nerko One', cursive;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+h4 {
+    font-family: 'Mulish', sans-serif;
+}
+
+p {
+    font-family: 'Mulish', sans-serif;
 }
 
 a {
+    font-family: 'Julius Sans One', sans-serif;
     text-decoration: none;
     color: black;
+    font-weight: 0;
 }
 
 ul {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: lighter;
     padding: 0;
     list-style-type: none;
 }
@@ -109,7 +137,7 @@ header {
 }
 
 #card_nav > nav > *:not(:last-child) {
-    margin-right: 15px;
+    margin-right: var(--nav_spacing);
 }
 
 #card_nav > nav > a {
@@ -118,6 +146,7 @@ header {
    text-decoration: none;
    color: black;
    font-weight: 900;
+   font-size: var(--nav_height);
 }
 
 #card_nav > nav > a > img {
@@ -151,14 +180,14 @@ footer {
     content:attr(aria-label);
     font-size:120%;
     font-weight:bolder;
-    color: rgba(255, 255, 255, 0.775);
+    color: rgba(255, 255, 255, 0.85);
     font-size: calc(var(--footer_font_size) * 1.2);
     line-height: calc(var(--footer_font_size) * 5);
 }
 
 .footer_column > li > a {
     font-weight: 550;
-    color: rgba(255, 255, 255, 0.775);
+    color: rgba(255, 255, 255, 0.85);
     font-size: var(--footer_font_size);
     line-height: calc(var(--footer_font_size) * 2.5);
 }
@@ -167,7 +196,7 @@ footer {
     width: 100%;
 
     text-align: right;
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.85);
     font-size: var(--footer_font_size);
 
     margin-top: var(--footer_font_size);
@@ -205,7 +234,7 @@ footer {
     flex-direction: column;
     align-items: center;
 
-    padding-top: var(--header_height);
+    padding-top: calc(var(--header_height) - var(--picture_margin));
 }
 
 #binder > * {
@@ -236,12 +265,6 @@ footer {
     height: cal(var(--square_img_width)*3);
 }
 
-.top_articles {
-    background-color: black;
-    border-radius: var(--card_border_radius);
-    margin: calc(var(--picture_margin)/2);
-}
-
 #top_left_1 {
     grid-area: left1;
     background: url(../img/top/left1.jpeg);
@@ -261,9 +284,37 @@ footer {
 }
 
 #top_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    padding-bottom: 50px;
     grid-area: right;
     background: url(../img/top/right.jpg);
     background-size: cover;
+}
+
+.top_articles {
+    background-color: black;
+    border-radius: var(--card_border_radius);
+    margin: calc(var(--picture_margin)/2);
+}
+
+.top_articles > * {
+    color: white;
+    margin-bottom: 20px;
+}
+
+#top_big {
+    background: url(../img/top/right.jpg);
+    background-size: cover;
+}
+
+#card_explore {
+    background-color: rgb(14,111,238);
+    border-radius: 0;
+    width: 100%;
+    height: 120vh;
 }
 
 #card_donate {
@@ -294,6 +345,8 @@ footer {
     width: var(--donate_img_size);
     height: var(--donate_img_size);
 
+    border-radius: var(--card_border_radius);
+
     background: url(../img/animals/meerkats-zoo-animals-zoological-garden-preview.jpeg);
     background-size: cover;
 }
@@ -304,4 +357,6 @@ footer {
 
 #card_donate_text > p {
     font-size: var(--donate_text_size);
+    line-height: calc(var(--donate_text_size) * 2);
+    padding-right: 5vw;
 }
