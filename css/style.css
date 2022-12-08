@@ -8,50 +8,53 @@
 }
 
 :root {
-    --header_height: 125px;
-    --nav_height: 18px;
-    --nav_spacing: 40px;
+    --p_standard_size: 3vh;
+    --h_standard_size: 5vh;
+    --header_height: 15vh;
+    --nav_height: 2.5vh;
+    --nav_spacing: 3vw;
 
-    --card_border_radius: 30px;
-    --card_width: 70vw;
-    --card_spacing: 175px;
+    --card_border_radius: 2vh;
+    --card_width: 75vw;
+    --card_spacing: 25vh;
 
     --padding_default: 40px;
-    --picture_margin: 40px;
-    --square_img_width: 13.5vw;
+    --picture_margin: 2vw;
+    --square_img_width: 25vh;
 
     --footer_height: 400px;
     --footer_padding_top: 50px; 
-    --footer_font_size: 12px;
+    --footer_font_size: 0.65rem;
     --footer_line_height: 24px;
     --footer_content_width: 800px;
     --footer_divider_margin: 50px;
     --footer_divider_width: 0.5px;
 
     --button_border_radius: 7px;
-    --button_padding_side: 25px;
-    --button_padding_vertical: 8px;
-    --button_text_size: 20px;
+    --button_padding_side: 30px;
+    --button_padding_vertical: 10px;
+    --button_text_size: 1.25rem;
 
     --donate_img_size: calc(var(--card_width) / 2);
-    --donate_text_size: 18px;
+    --donate_text_size: 1rem;
 }
 
 h1 {
     font-family: 'Work Sans', sans-serif;
     font-weight: 800;
+    font-size: var(--h_standard_size);
 }
 
 h2 {
     font-family: 'Nerko One', cursive;
     font-weight: 100;
-    font-size: 50px;
+    font-size: var(--h_standard_size);
 }
 
 h3 {
     font-family: 'Nerko One', cursive;
     font-weight: 100;
-    font-size: 50px;
+    font-size: calc(var(--h_standard_size) * 1.5);
 }
 
 h4 {
@@ -114,6 +117,7 @@ header {
 
     position: fixed;
     width: 100%;
+    background-color: white;
 }
 
 #card_nav {
@@ -127,6 +131,7 @@ header {
     border-top-right-radius: 0;
     padding-right: var(--padding_default);
     padding-left: var(--padding_default);
+    transition: 0.2s;
 }
 
 #card_nav > nav {
@@ -255,14 +260,8 @@ footer {
 }
 
 #card_top {
-    grid-template-columns: var(--square_img_width) 4fr;
-    grid-template-rows: var(--square_img_width) var(--square_img_width) var(--square_img_width);
-    grid-template-areas: 
-    "left1 right"
-    "left2 right"
-    "left3 right";
-
-    height: cal(var(--square_img_width)*3);
+    width: var(--card_width);
+    height: calc(var(--square_img_width)*4);
 }
 
 #top_left_1 {
@@ -273,7 +272,7 @@ footer {
 
 #top_left_2 {
     grid-area: left2;
-    background: url(../img/top/left2.webp);
+    background: url(../img/top/left2.jpg);
     background-size: cover;
 }
 
@@ -288,21 +287,28 @@ footer {
     flex-direction: column;
     justify-content: end;
 
-    padding-bottom: 50px;
-    grid-area: right;
-    background: url(../img/top/right.jpg);
+    padding: 10vh;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/top/right.jpg);
     background-size: cover;
+}
+
+#top_right > p {
+    width: 35vw;
+}
+
+#top_right > *:not(:last-child) {
+    color: white;
+    margin-bottom: 1vh;
+}
+
+#top_right > :last-child {
+    margin-top: 1.5vh;
 }
 
 .top_articles {
     background-color: black;
     border-radius: var(--card_border_radius);
     margin: calc(var(--picture_margin)/2);
-}
-
-.top_articles > * {
-    color: white;
-    margin-bottom: 20px;
 }
 
 #top_big {
