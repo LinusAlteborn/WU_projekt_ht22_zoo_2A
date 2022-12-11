@@ -3,8 +3,8 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-    document.getElementById("card_nav").style.height = "40px";
+    document.getElementById("card_nav").style.height = "5vh";
   } else {
-    document.getElementById("card_nav").style.height = "75px";
+    document.getElementById("card_nav").style.height = "10vh";
   }
 }
