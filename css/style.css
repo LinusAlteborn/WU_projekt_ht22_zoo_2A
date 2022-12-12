@@ -16,7 +16,7 @@
 
     --card_border_radius: 2vh;
     --card_width: 75vw;
-    --card_spacing: 25vh;
+    --card_spacing: 20vh;
 
     --padding_default: 40px;
     --picture_margin: 2vw;
@@ -69,7 +69,7 @@ a {
     font-family: 'Julius Sans One', sans-serif;
     text-decoration: none;
     color: black;
-    font-weight: 0;
+    font-weight: 100;
 }
 
 ul {
@@ -98,12 +98,12 @@ ul {
 
 /* Bakgrund */
 html { 
-    background: white no-repeat center center fixed; 
+    background: rgb(236, 230, 227) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    backdrop-filter: 0;
+    backdrop-filter: 1;
     -webkit-backdrop-filter: blur(10px);
 }
 
@@ -117,7 +117,6 @@ header {
 
     position: fixed;
     width: 100%;
-    background-color: white;
 }
 
 #card_nav {
@@ -125,6 +124,7 @@ header {
     justify-content: space-between;
     align-items: center;
 
+    width: var(--card_width);
     height: var(--header_height);
 
     border-top-left-radius: 0;
@@ -239,7 +239,7 @@ footer {
     flex-direction: column;
     align-items: center;
 
-    padding-top: calc(var(--header_height) - var(--picture_margin));
+    padding-top: calc(var(--header_height) - var(--card_border_radius));
 }
 
 #binder > * {
@@ -316,13 +316,70 @@ footer {
     background-size: cover;
 }
 
+
+
+/* explore card */
 #card_explore {
-    background-color: rgb(14,111,238);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10vh 1fr;
+    grid-template-areas: 
+    "title title title"
+    "visit animals food";
+
     border-radius: 0;
+
+    background-color: rgb(89, 153, 237);
     width: 100%;
-    height: 120vh;
+    height: 98vh;
 }
 
+.explore_article {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    border-radius: var(--card_border_radius);
+
+    margin: calc(var(--picture_margin)/2);
+    padding: 5vh;
+}
+
+.explore_article > h2 {
+    font-size: 3rem;
+    color: white;
+}
+
+#explore_title {
+    grid-area: title;
+    text-align: center;
+
+    color: white;
+    font-size: 3rem;
+}
+
+#explore_visit {
+    grid-area: visit;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/animals/feeding-time-for-the-panda-550x413.jpeg);
+    background-size: cover;
+}
+
+#explore_animals {
+    grid-area: animals;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/animals/rs=w_365\,h_365\,cg_true.webp);
+    background-size: cover;
+}
+
+#explore_food {
+    grid-area: food;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/food/pizza.webp);
+    background-size: cover;
+}
+
+
+
+/* donate card */
 #card_donate {
     grid-template-columns: min-content(50%, 100%) var(--donate_img_size);
     grid-template-rows: var(--donate_img_size);
@@ -337,7 +394,6 @@ footer {
     grid-area: text;
 
     flex-direction: column;
-    align-items: left;
     justify-content: center;
 }
 
@@ -365,4 +421,150 @@ footer {
     font-size: var(--donate_text_size);
     line-height: calc(var(--donate_text_size) * 2);
     padding-right: 5vw;
+}
+
+
+
+/* mission card */
+#card_mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 15vh;
+}
+
+#card_mission > p {
+    text-align: center;
+}
+
+
+
+/* staff card */
+#card_staff {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 5vh 5vh;
+}
+
+#card_staff_binder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.staff_article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: calc(var(--card_width) / 5);
+    height: calc(var(--card_width) / 4.25);
+    padding: 1vh;
+    margin-top: 2vh;
+
+    border-radius: var(--card_border_radius);
+    background-color: rgb(255, 255, 255);
+}
+
+.staff_article > p {
+    font-size: 0.75rem;
+}
+
+.staff_article > h3 {
+    font-size: 2rem;
+}
+
+.staff_article > #staff_Binus_img {
+    width: 100%;
+    height: 100%;
+    background: url(../img/persons/avatar-14442c2e192eabfebb9e45f07b23cdd8.jpg);
+    background-size: cover;
+    border-radius: var(--card_border_radius);
+}
+
+
+
+/* food card */
+#card_food {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 15vh 13vw;
+}
+
+#card_food > p {
+    text-align: center;
+    margin-top: 3vh;
+}
+
+
+
+/* menu card*/
+#card_menu {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: 15vh 1fr 1fr;
+    grid-template-areas:
+    "title title title title"
+    "pizza burger burger chickenandfish"
+    "drinks drinks sides sides";
+
+    height: 105vh;
+}
+
+.menu_article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 2vh;
+
+    border-radius: var(--card_border_radius);
+    margin: calc(var(--picture_margin) / 2);
+}
+
+#card_menu > h2 {
+    grid-area: title;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.menu_article > h2 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+#menu_pizza {
+    grid-area: pizza;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/food/pizza.webp);
+    background-size: cover;
+}
+
+#menu_hamburger {
+    grid-area: burger;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/food/burger.jpeg);
+    background-size: cover;
+}
+
+#menu_chicken_and_fish {
+    grid-area: chickenandfish;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/food/bruh.jpeg);
+    background-size: cover;
+}
+
+#menu_drinks {
+    grid-area: drinks;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/food/drink.jpeg);
+    background-size: cover;
+}
+
+#menu_sides {
+    grid-area: sides;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/food/sides.jpeg);
+    background-size: cover;
 }
