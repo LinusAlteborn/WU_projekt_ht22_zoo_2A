@@ -10,8 +10,8 @@
 :root {
     --p_standard_size: 3vh;
     --h_standard_size: 5vh;
-    --header_height: 15vh;
-    --nav_height: 2.5vh;
+    --header_height: 10vh;
+    --nav_height: 2vh;
     --nav_spacing: 3vw;
 
     --card_border_radius: 2vh;
