@@ -485,6 +485,30 @@ footer {
     border-radius: var(--card_border_radius);
 }
 
+.staff_article > #staff_Markus_img {
+    width: 100%;
+    height: 100%;
+    background: url(../img/persons/avatar-1b1afc16e9bc79edbb292d32abbc2a86.jpg);
+    background-size: cover;
+    border-radius: var(--card_border_radius);
+}
+
+.staff_article > #staff_Magreta_img {
+    width: 100%;
+    height: 100%;
+    background: url(../img/persons/avatar-6eff317c04c60419d06b2f4b0323eef0.jpg);
+    background-size: cover;
+    border-radius: var(--card_border_radius);
+}
+
+.staff_article > #staff_Peter_img {
+    width: 100%;
+    height: 100%;
+    background: url(../img/persons/avatar-23fdc1d1c52f710520d659f56a264b40.jpg);
+    background-size: cover;
+    border-radius: var(--card_border_radius);
+}
+
 
 
 /* food card */
@@ -518,9 +542,9 @@ footer {
 
 .menu_article {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: flex-start;
 
     padding: 2vh;
 
@@ -537,6 +561,21 @@ footer {
 .menu_article > h2 {
     color: white;
     font-size: 2.5rem;
+    text-align: center;
+    width: 100%;
+    padding-top: 0;
+}
+
+.menu_article > h2 > p {
+    font-size: 0.75rem;
+}
+
+.menu_article > h3 {
+    color: white;
+    font-size: 2rem;
+    text-align: right;
+    width: 100%;
+    padding-bottom: 0;
 }
 
 #menu_pizza {
