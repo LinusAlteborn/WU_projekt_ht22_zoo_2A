@@ -98,13 +98,7 @@ ul {
 
 /* Bakgrund */
 html { 
-    background: rgb(236, 230, 227) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    backdrop-filter: 1;
-    -webkit-backdrop-filter: blur(10px);
+    background: rgb(236, 230, 227) no-repeat center center fixed;
 }
 
 
@@ -169,14 +163,14 @@ footer {
     width: 100%;
     height: var(--footer_height);
     
-    background:rgb(0,145,91);
+    background:rgb(2, 129, 83);
     padding: var(--footer_padding_top) calc(50% - var(--footer_content_width)/2);
 }
 
 #footer_binder {
     display: flex;
     justify-content: space-between;
-    align-items: top;
+    align-items: flex-end;
 
     width: 100%;
 }
@@ -185,14 +179,14 @@ footer {
     content:attr(aria-label);
     font-size:120%;
     font-weight:bolder;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.9);
     font-size: calc(var(--footer_font_size) * 1.2);
     line-height: calc(var(--footer_font_size) * 5);
 }
 
 .footer_column > li > a {
     font-weight: 550;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.9);
     font-size: var(--footer_font_size);
     line-height: calc(var(--footer_font_size) * 2.5);
 }
@@ -201,7 +195,7 @@ footer {
     width: 100%;
 
     text-align: right;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.9);
     font-size: var(--footer_font_size);
 
     margin-top: var(--footer_font_size);
