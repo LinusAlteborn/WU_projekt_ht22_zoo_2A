@@ -409,7 +409,7 @@ footer {
 
     border-radius: var(--card_border_radius);
 
-    background: url(../img/animals/meerkats-zoo-animals-zoological-garden-preview.jpeg);
+    background: url(../img/animals/meerkats2.png);
     background-size: cover;
 }
 
@@ -463,7 +463,7 @@ footer {
     width: calc(var(--card_width) / 5);
     height: calc(var(--card_width) / 4.25);
     padding: 1vh;
-    margin-top: 2vh;
+    margin: 2vh 1vw;
 
     border-radius: var(--card_border_radius);
     background-color: rgb(255, 255, 255);
@@ -505,6 +505,38 @@ footer {
     width: 100%;
     height: 100%;
     background: url(../img/persons/avatar-23fdc1d1c52f710520d659f56a264b40.jpg);
+    background-size: cover;
+    border-radius: var(--card_border_radius);
+}
+
+.staff_article > #staff_Obingus_img {
+    width: 100%;
+    height: 100%;
+    background: url(../img/persons/avatar-a23eed54c62b7e55dea7606998af0c9a.jpg);
+    background-size: cover;
+    border-radius: var(--card_border_radius);
+}
+
+.staff_article > #staff_Brigitte_img {
+    width: 100%;
+    height: 100%;
+    background: url(../img/persons/avatar-d54eda9dcb9e319bb2b77b6e76cae8fc.jpg);
+    background-size: cover;
+    border-radius: var(--card_border_radius);
+}
+
+.staff_article > #staff_Joe_img {
+    width: 100%;
+    height: 100%;
+    background: url(../img/persons/avatar-aea3441ddc1173c3b63794fe1ebcce0e.jpg);
+    background-size: cover;
+    border-radius: var(--card_border_radius);
+}
+
+.staff_article > #staff_Sara_img {
+    width: 100%;
+    height: 100%;
+    background: url(../img/persons/avatar-7e6c3ea471a1ac6911e35c6b3fa46870.jpg);
     background-size: cover;
     border-radius: var(--card_border_radius);
 }
