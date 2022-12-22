@@ -402,9 +402,6 @@ footer {
     height: var(--donate_img_size);
 
     border-radius: var(--card_border_radius);
-
-    background: url(../img/animals/meerkats2.png);
-    background-size: cover;
 }
 
 #card_donate_text > h2 {
