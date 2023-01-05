@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>episck zooo sida</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <script src="js/function2.js"></script>
+<!-- Lite knasig kod som låter mig återanvända header och footer i alla sidor (lättare att ändra saker i header och footer då) -->
+<script
+    src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
+</script>
+<script> 
+$(function(){
+  $("header").load("../html_templates/header.html"); 
+  $("footer").load("../html_templates/footer.html"); 
+});
+</script> 
+</head>
+<body>
+    <div id="grid_wrapper">
+        <header></header>
+        <!-- Att ha flex för innehållet som kan ändras är användbart eftersom att den kan skalas automatiskt till innehållet, jag behöver inte gå in i css och ändra min grid sak. -->
+        <div id="binder">
+            <section class="card" id="card_top"></section>
+            <section class="card" id="card_cams"></section>
+            <section class="card" id="card_donate"></section>
+            <section class="card" id="card_our_food"></section>
+            <section class="card" id="card_menu"></section>
+            <section class="card" id="card_our_mission"></section>
+            <section class="card" id="card_staff"></section>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
