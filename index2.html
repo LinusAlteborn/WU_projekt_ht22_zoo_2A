@@ -6,32 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>episck zooo sida</title>
     <link rel="stylesheet" href="css/style2.css">
-    <script src="js/function2.js"></script>
-<!-- Lite knasig kod som låter mig återanvända header och footer i alla sidor (lättare att ändra saker i header och footer då) -->
-<script
-    src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
-</script>
-<script> 
-$(function(){
-  $("header").load("../html_templates/header.html"); 
-  $("footer").load("../html_templates/footer.html"); 
-});
-</script> 
+    <script type="module" src="js/main.js"></script>
 </head>
 <body>
+    <!-- Jag använder mig av mycket costum elements för att inte behöve skriva om kod i flera sidor. Nu behöver jag endast ändra template filen och sedan uppdateras det på alla sidor automatiskt. -->
     <div id="grid_wrapper">
-        <header></header>
-        <!-- Att ha flex för innehållet som kan ändras är användbart eftersom att den kan skalas automatiskt till innehållet, jag behöver inte gå in i css och ändra min grid sak. -->
+        <my-header></my-header>
+        <!-- Att ha en flex förälder för innehållet som kan ändras är användbart eftersom att den kan skalas automatiskt till innehållet, jag behöver inte gå in i css och ändra min grid sak. -->
         <div id="binder">
-            <section class="card" id="card_top"></section>
-            <section class="card" id="card_cams"></section>
-            <section class="card" id="card_donate"></section>
-            <section class="card" id="card_our_food"></section>
-            <section class="card" id="card_menu"></section>
-            <section class="card" id="card_our_mission"></section>
-            <section class="card" id="card_staff"></section>
+            <card-top></card-top>
+            <card-menu></card-menu>
+            <card-cams></card-cams>
+            <card-staff></card-staff>
+            <card-donate></card-donate>
+            <card-our-food></card-our-food>
+            <card-our-mission></card-our-mission>
         </div>
-        <footer></footer>
+        <my-footer></my-footer>
     </div>
 </body>
 </html>

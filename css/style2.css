@@ -1,45 +1,126 @@
+/* GLOBALA SAKER */
 *{
     padding: 0;
-    margin: 0;}
+    margin: 0;
+    box-sizing: border-box;
+}
 
 body{
     background-color: #2c2d2e;
 }
 
 :root{
-    --header_height: 75px;
-    --binder_width: 1400px;
+    --site_padding_vertical: 20px;
+    --site_padding_horizontal: 30px;
+
+    --header_height: 4rem;
+    --header_nav_height: 1.5rem;
+    --header_nav_spacing: 15px;
+
     --footer_height: 350px;
+
+    --binder_width: 1400px;
+    --binder_spacing: 0;
+}
+a{text-decoration: none;}
+h1          	{font-size: 2rem;                           color: black;       font-family: sans-serif;}
+nav > a         {font-size: 0.85rem;                        color: black;       font-family: sans-serif;}
+nav > a > img   {height: var(--header_nav_height);          color: black;       font-family: sans-serif;}
+
+
+/* ÅTERANVÄNDA ELEMENT */
+.search-bar{
+    display: flex;
+    align-items: center;
+
+    width: 300px;
+    height: 2rem;
+    max-width: 500px;
+
+    padding: 0.25rem 0.5rem;
+
+    border-radius: 1rem;
+
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px) saturate(180%);
+}
+.search-bar > input{
+    flex: 1;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+}
+.search-bar > button{
+    width: 1.5rem;
+    height: 1.5rem;
+
+    border-radius: 100%;
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+}
+.search-bar > button > img{
+    width: 1.15rem;
 }
 
+
+/* ÖVERGRIPANDE GRID */
 #grid_wrapper{
     display: grid;
     grid-template-columns: 1fr var(--binder_width) 1fr;
     grid-template-rows: var(--header_height) minmax(min-content, max-content) var(--footer_height);
     grid-template-areas:
-    "header header header"
+    ". header ."
     ". binder ."
     "footer footer footer";
 }
-header{grid-area: header;}
-footer{grid-area: footer;}
-#binder{grid-area: binder;}
+header      {grid-area: header;}
+footer      {grid-area: footer;}
+#binder     {grid-area: binder;}
 
+
+/* HEADER */
 header{
-    background-color: #484a53;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #a2a6b9;
 }
 
+header > nav {
+    display: flex;
+    align-items: center;
+}
+
+header > nav > * {
+    margin-left: var(--header_nav_spacing);
+}
+
+
+/* FOOTER */
 footer{
-    background-color: #4d5966;
+    background-color: #708dac;
 }
 
+
+/* GLOBALA KORT SAKER */
 #binder{
     display: flex;
     flex-direction: column;
 }
 
 .card{
-    height: 750px;
-    margin-bottom: 100px;
+    height: 900px;
+    margin-bottom: var(--binder_spacing);
     background-color: #3e4042;
+}
+
+
+/* CARD (TOP) */
+#card-top {
+    background-color: aqua;
 }
