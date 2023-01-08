@@ -62,6 +62,7 @@ class MyFooter extends HTMLElement {
 // card fetching
 var cards = [
     'card-top',
+    'card-tickets',
     'card-menu',
     'card-cams',
     'card-staff',
