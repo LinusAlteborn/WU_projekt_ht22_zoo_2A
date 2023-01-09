@@ -8,27 +8,28 @@
 }
 
 :root {
-    --p_standard_size: 3vh;
-    --h_standard_size: 5vh;
-    --header_height: 10vh;
-    --nav_height: 2vh;
-    --nav_spacing: 3vw;
+    --p_standard_size: 1rem;
+    --h_standard_size: 2rem;
+    --header_height: 100px;
+    --header_height_min: 50px;
+    --nav_height: 1rem;
+    --nav_spacing: 30px;
 
-    --card_border_radius: 2vh;
-    --card_width: 75vw;
-    --card_spacing: 20vh;
+    --card_border_radius: 20px;
+    --card_width: 1400px;
+    --card_spacing: 200px;
 
     --padding_default: 40px;
-    --picture_margin: 2vw;
+    --picture_margin: 30px;
     --square_img_width: 25vh;
 
-    --footer_height: 400px;
+    --footer_height: 500px;
     --footer_padding_top: 50px; 
-    --footer_font_size: 0.65rem;
+    --footer_font_size: 0.75rem;
     --footer_line_height: 24px;
-    --footer_content_width: 800px;
+    --footer_content_width: 1000px;
     --footer_divider_margin: 50px;
-    --footer_divider_width: 0.5px;
+    --footer_divider_width: 1px;
 
     --button_border_radius: 7px;
     --button_padding_side: 30px;
@@ -233,7 +234,7 @@ footer {
     flex-direction: column;
     align-items: center;
 
-    padding-top: calc(var(--header_height) - var(--card_border_radius));
+    padding-top: calc(var(--header_height) - var(--card_border_radius) * 2);
 }
 
 #binder > * {
@@ -282,7 +283,7 @@ footer {
     justify-content: end;
 
     padding: 10vh;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/top/right.jpg);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/animals/tiger.jpg);
     background-size: cover;
 }
 
