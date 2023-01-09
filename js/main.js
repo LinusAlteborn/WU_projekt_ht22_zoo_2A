@@ -2,6 +2,7 @@ class Person {
     name;
     profession;
     avatar;
+    number;
   
     constructor(name, profession, avatar) {
       this.name = name;
@@ -42,6 +43,17 @@ class Live_Cam {
         this.icon = icon;
     }
 }
+class Ticket {
+    name;
+    price;
+    icon;
+
+    constructor(name, price, icon) {
+        this.name = name;
+        this.price = price;
+        this.icon = icon;
+    }
+}
 
 // header and footer custom element definitions
 class MyHeader extends HTMLElement {
@@ -69,7 +81,7 @@ var cards = [
     'card-donate',
     'card-our-food',
     'card-our-mission'
-]
+];
 function fetch_cards(cards){
     for (var i = 0; i < cards.length; i++){
         fetch_card(cards[i]);
@@ -89,13 +101,26 @@ var staff = [
 //låter mig spara namet på personer och deras bilder lättare samt låter mig använda elemten och textern hur jag vill
 function staff_load(){
     for (var i = 0; i < staff.length; i++) {
-        document.getElementById("card-top").innerHTML += "<p>" + staff[i].name + "</p>";
+        fetch("../html_templates/" + "employee" + ".html").then(r=>r.text()).then((html)=>{ // get the content of products.html
+            document.getElementById("card-staff").innerHTML += html;
+        });
     }
 }
 
 var menu = [
 
-]
+];
+function menu_load(){
+
+}
+
+var tickets = [
+    new Ticket("Family Ticket", "59.99$", "../img/tickets/family")
+];
+function tickets_load(){
+
+}
+
 // ersätter custom element med mina templates
 customElements.define('my-header', MyHeader);
 customElements.define('my-footer', MyFooter);
@@ -103,4 +128,6 @@ fetch_cards(cards);
 //laddar alla element som jag har sparat i javascript (meny, live cams och staff)
 window.onload = function WindowLoad() {
     staff_load();
+    menu_load();
+    tickets_load();
 }

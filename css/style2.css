@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&family=Hammersmith+One&family=Jost:wght@100;200;300;400;500;600;700;800;900&family=Mulish:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
 /* GLOBALA SAKER */
 *{
     padding: 0;
@@ -6,7 +8,7 @@
 }
 
 body{
-    background-color: rgb(244,229,255);
+    background-color: #ffffff;
 }
 
 :root{
@@ -17,16 +19,28 @@ body{
     --header_nav_height: 1.5rem;
     --header_nav_spacing: 30px;
 
-    --footer_height: 350px;
+    --footer_height: 450px;
+    --footer_padding_top: 50px;
+    --footer_binder_width: 900px;
 
     --binder_width: 1200px;
     --binder_spacing: 0;
 }
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Julius+Sans+One&family=Mulish:wght@600&family=Nerko+One&family=Work+Sans:wght@300;500;800&display=swap');
-a{text-decoration: none;}
-h1          	{font-size: 2rem;                           color: black;       font-family: 'Work Sans', sans-serif;}
-nav > a         {font-size: 0.85rem;                        color: black;       font-family: sans-serif;}
-nav > a > img   {height: var(--header_nav_height);          color: black;       font-family: sans-serif;}
+
+a{text-decoration: none; color: black;}
+ul{list-style-type: none;}
+li>a{line-height: 2rem;}
+ul::before{line-height: 4rem;}
+
+h1          	{font-size: 2rem;       font-family: 'Hammersmith One', sans-serif;}
+h2              {font-size: 3rem;       font-family: 'Dokdo', cursive;              font-weight: 1000;}
+h3              {font-size: 3rem;       font-family: 'Jost', sans-serif;            font-weight: 800;   letter-spacing: 2px;}
+h4              {font-size: 1rem;       font-family: 'Jost', sans-serif;            font-weight: 500;}
+p               {font-size: 1rem;       font-family: 'Mulish', sans-serif;          font-weight: 500;}
+a               {font-size: 1rem;       font-family: 'Jost', sans-serif;            font-weight: 500;   letter-spacing: 0.75px;}
+ul              {font-size: 0.8rem;     font-family: 'Jost', sans-serif;            font-weight: 500;   letter-spacing: 0.75px;}
+ul > li > a     {font-weight: 300;}
+nav > a > img   {height: var(--header_nav_height);}
 
 
 /* ÅTERANVÄNDA ELEMENT */
@@ -42,7 +56,7 @@ nav > a > img   {height: var(--header_nav_height);          color: black;       
 
     border-radius: 1rem;
 
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgb(238, 238, 238);
     backdrop-filter: blur(4px) saturate(180%);
 }
 .search-bar > input{
@@ -67,6 +81,24 @@ nav > a > img   {height: var(--header_nav_height);          color: black;       
 }
 .search-bar > button > img{width: 1.15rem;}
 
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 200px;
+    height: 60px;
+
+    font-family: 'Jost', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    border-radius: 10px;
+
+    color: white;
+    background-color: rgb(18, 186, 124);
+}
+
 
 /* ÖVERGRIPANDE GRID */
 #grid_wrapper{
@@ -75,7 +107,7 @@ nav > a > img   {height: var(--header_nav_height);          color: black;       
     grid-template-rows: var(--header_height) minmax(min-content, max-content) var(--footer_height);
     grid-template-areas:
     ". header ."
-    ". binder ."
+    "binder binder binder"
     "footer footer footer";
 }
 header      {grid-area: header;}
@@ -89,7 +121,7 @@ header{
     align-items: center;
     justify-content: space-between;
 
-    background-color: rgb(244,229,255);
+    background-color: #FFFFFF;
 }
 
 header > nav {
@@ -97,14 +129,44 @@ header > nav {
     align-items: center;
 }
 header > nav > *:not(:last-child) {margin-right: var(--header_nav_spacing);}
-header > nav > .search-bar {
-
-}
 
 
 /* FOOTER */
 footer{
-    background-color: #708dac;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: var(--footer_padding_top);
+
+    background-color: #00915B;
+    color: rgba(255, 255, 255, 0.801);
+}
+footer > *{width: var(--footer_binder_width);}
+footer > #footer_binder{
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+footer > #footer_binder > .footer_column::before {
+    content:attr(aria-label);
+    color: white;
+}
+footer > #footer_binder > ul > li > a{
+    color: rgba(255, 255, 255, 0.76);
+}
+footer > hr{
+    border: none;
+    height: 0.5px;
+    color: #ffffff7c;
+    background-color: #ffffffb2;
+}
+footer > #footer_copyright{
+    margin-top: 10px;
+
+    font-size: 0.75rem;
+    text-align: right;
 }
 
 
@@ -112,23 +174,59 @@ footer{
 #binder{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .card{
+    width: var(--binder_width);
+
     margin-bottom: var(--binder_spacing);
-    background-color: #3e4042;
+
+    background-color: white;
 }
 
 
 /* CARD (TOP) */
 #card-top {
     height: 650px;
-    background-color: rgb(244,229,255);
+
+    color: white;
+}
+#card-top > article{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background: url(../img/animals/tiger.jpg);
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 45px;
+
+    border-radius: 25px;
+}
+#card-top > article > *:not(:last-child){
+    max-width: 450px;
+    margin-bottom: 20px;
+}
+#card-top > article > .button{
+    margin-top: 20px;
 }
 
 
 /* CARD TICKETS */
 #card-tickets {
+    width: 100%;
     height: 500px;
-    background-color: white;
+    background-color: #F6F1EF;
+}
+
+
+/* CARD CAMS */
+#card-cams{
+    width: 100%;
+    height: 500px;
+    background-color: #0E6FEE;
 }

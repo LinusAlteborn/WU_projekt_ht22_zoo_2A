@@ -41,19 +41,19 @@
 
 h1 {
     font-family: 'Work Sans', sans-serif;
-    font-weight: 800;
+    font-weight: bold;
     font-size: var(--h_standard_size);
 }
 
 h2 {
     font-family: 'Nerko One', cursive;
-    font-weight: 100;
+    font-weight: lighter;
     font-size: var(--h_standard_size);
 }
 
 h3 {
     font-family: 'Nerko One', cursive;
-    font-weight: 100;
+    font-weight: lighter;
     font-size: calc(var(--h_standard_size) * 1.5);
 }
 
@@ -355,13 +355,13 @@ footer {
 
 #explore_visit {
     grid-area: visit;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/animals/feeding-time-for-the-panda-550x413.jpeg);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/animals/panda.jpeg);
     background-size: cover;
 }
 
 #explore_animals {
     grid-area: animals;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/animals/rs=w_365\,h_365\,cg_true.webp);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/animals/flamingo.jpeg);
     background-size: cover;
 }
 
@@ -471,7 +471,7 @@ footer {
 .staff_article > #staff_Binus_img {
     width: 100%;
     height: 100%;
-    background: url(../img/persons/avatar-14442c2e192eabfebb9e45f07b23cdd8.jpg);
+    background: url(../img/persons/guy.jpg);
     background-size: cover;
     border-radius: var(--card_border_radius);
 }
@@ -479,7 +479,7 @@ footer {
 .staff_article > #staff_Markus_img {
     width: 100%;
     height: 100%;
-    background: url(../img/persons/avatar-1b1afc16e9bc79edbb292d32abbc2a86.jpg);
+    background: url(../img/persons/guy2.jpg);
     background-size: cover;
     border-radius: var(--card_border_radius);
 }
@@ -487,7 +487,7 @@ footer {
 .staff_article > #staff_Magreta_img {
     width: 100%;
     height: 100%;
-    background: url(../img/persons/avatar-6eff317c04c60419d06b2f4b0323eef0.jpg);
+    background: url(../img/persons/girl.jpg);
     background-size: cover;
     border-radius: var(--card_border_radius);
 }
@@ -495,7 +495,7 @@ footer {
 .staff_article > #staff_Peter_img {
     width: 100%;
     height: 100%;
-    background: url(../img/persons/avatar-23fdc1d1c52f710520d659f56a264b40.jpg);
+    background: url(../img/persons/guy3.jpg);
     background-size: cover;
     border-radius: var(--card_border_radius);
 }
@@ -503,7 +503,7 @@ footer {
 .staff_article > #staff_Obingus_img {
     width: 100%;
     height: 100%;
-    background: url(../img/persons/avatar-a23eed54c62b7e55dea7606998af0c9a.jpg);
+    background: url(../img/persons/guy4.jpg);
     background-size: cover;
     border-radius: var(--card_border_radius);
 }
@@ -511,7 +511,7 @@ footer {
 .staff_article > #staff_Brigitte_img {
     width: 100%;
     height: 100%;
-    background: url(../img/persons/avatar-d54eda9dcb9e319bb2b77b6e76cae8fc.jpg);
+    background: url(../img/persons/girl3.jpg);
     background-size: cover;
     border-radius: var(--card_border_radius);
 }
@@ -519,7 +519,7 @@ footer {
 .staff_article > #staff_Joe_img {
     width: 100%;
     height: 100%;
-    background: url(../img/persons/avatar-aea3441ddc1173c3b63794fe1ebcce0e.jpg);
+    background: url(../img/persons/guy5.jpg);
     background-size: cover;
     border-radius: var(--card_border_radius);
 }
@@ -527,7 +527,7 @@ footer {
 .staff_article > #staff_Sara_img {
     width: 100%;
     height: 100%;
-    background: url(../img/persons/avatar-7e6c3ea471a1ac6911e35c6b3fa46870.jpg);
+    background: url(../img/persons/girl6.jpg);
     background-size: cover;
     border-radius: var(--card_border_radius);
 }
@@ -615,18 +615,18 @@ footer {
 
 #menu_chicken_and_fish {
     grid-area: chickenandfish;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/food/bruh.jpeg);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/food/skolmat.jpeg);
     background-size: cover;
 }
 
 #menu_drinks {
     grid-area: drinks;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/food/drink.jpeg);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/food/fruit.jpeg);
     background-size: cover;
 }
 
 #menu_sides {
     grid-area: sides;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/food/sides.jpeg);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.788)), url(../img/food/hotdog.jpeg);
     background-size: cover;
 }
